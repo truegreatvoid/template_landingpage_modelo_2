@@ -1,0 +1,82 @@
+{% load static %}
+
+<div class="container my-5 mb-5">
+    <div class="mx-auto text-center wow fadeIn mb-5" data-wow-delay="0.1s" style="max-width: 700px; visibility: visible; animation-delay: 0.1s; animation-name: fadeIn;">
+        <h4 class="text-primary mb-4 border-bottom border-primary border-2 d-inline-block p-2 title-border-radius">Conheça nosso Time</h4>
+    </div>
+    <div class="d-flex align-items-center">
+        <button class="btn btn-primary me-3" onclick="scrollCarousel(-1)">
+            <i class="bi bi-arrow-left"></i>
+        </button>
+        <div id="carousel" class="d-flex overflow-hidden" style="gap: 1rem; scroll-snap-type: x mandatory; width: 100%;">
+            <div class="card flex-shrink-0 border-0" style="width: 18rem; scroll-snap-align: start;">
+                <div class="team-item border border-primary img-border-radius overflow-hidden">
+                    <img src="{% static 'img/event-1.jpg' %}" class="img-fluid w-100" alt="">
+                    <div class="team-content text-center py-3">
+                        <h4 class="text-primary">Lorem Ppsum</h4>
+                        <p class="text-muted mb-2">Lorem Ppsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card flex-shrink-0 border-0" style="width: 18rem; scroll-snap-align: start;">
+                <div class="team-item border border-primary img-border-radius overflow-hidden">
+                    <img src="{% static 'img/event-1.jpg' %}" class="img-fluid w-100" alt="">
+                    <div class="team-content text-center py-3">
+                        <h4 class="text-primary">Lorem Ppsum</h4>
+                        <p class="text-muted mb-2">Lorem Ppsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card flex-shrink-0 border-0" style="width: 18rem; scroll-snap-align: start;">
+                <div class="team-item border border-primary img-border-radius overflow-hidden">
+                    <img src="{% static 'img/event-1.jpg' %}" class="img-fluid w-100" alt="">
+                    <div class="team-content text-center py-3">
+                        <h4 class="text-primary">Lorem Ppsum</h4>
+                        <p class="text-muted mb-2">Lorem Ppsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card flex-shrink-0 border-0" style="width: 18rem; scroll-snap-align: start;">
+                <div class="team-item border border-primary img-border-radius overflow-hidden">
+                    <img src="{% static 'img/event-1.jpg' %}" class="img-fluid w-100" alt="">
+                    <div class="team-content text-center py-3">
+                        <h4 class="text-primary">Lorem Ppsum</h4>
+                        <p class="text-muted mb-2">Lorem Ppsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card flex-shrink-0 border-0" style="width: 18rem; scroll-snap-align: start;">
+                <div class="team-item border border-primary img-border-radius overflow-hidden">
+                    <img src="{% static 'img/event-1.jpg' %}" class="img-fluid w-100" alt="">
+                    <div class="team-content text-center py-3">
+                        <h4 class="text-primary">Lorem Ppsum</h4>
+                        <p class="text-muted mb-2">Lorem Ppsum</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card flex-shrink-0 border-0" style="width: 18rem; scroll-snap-align: start;">
+                <div class="team-item border border-primary img-border-radius overflow-hidden">
+                    <img src="{% static 'img/event-1.jpg' %}" class="img-fluid w-100" alt="">
+                    <div class="team-content text-center py-3">
+                        <h4 class="text-primary">Lorem Ppsum</h4>
+                        <p class="text-muted mb-2">Lorem Ppsum</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="btn btn-primary ms-3" onclick="scrollCarousel(1)">
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+</div>
+
+<script>
+    function scrollCarousel(direction) {
+        const carousel = document.getElementById('carousel');
+        const cardWidth = carousel.querySelector('.card').offsetWidth;
+        carousel.scrollBy({
+            left: direction * cardWidth,
+            behavior: 'smooth'
+        });
+    }
+</script>

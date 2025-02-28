@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="Escola Alegria do Saber">
+		<title>VerseSync</title>
+		{% include "base/include/_css.html" %}
+    {% block css_ %}
+    {% endblock css_ %}
+	</head>
+	<body>
+		{% include "base/partials/_spinner.html" %}
+
+		{% include "base/partials/_navbar.html" %}
+
+		{% block conteudo %} {% endblock conteudo %}
+
+		{% include "base/partials/_footer.html" %}
+
+		{% include "base/partials/_copyright.html" %}
+
+		{% include "base/partials/_btt.html" %}
+
+    {% include "base/include/_js.html" %}
+		
+    {% block js_ %}
+    {% endblock js_ %}
+	</body>
+</html>
